@@ -29,7 +29,6 @@ Projet réalisé dans le cadre d'un projets scolaire
 
 | Compétence | Apprentissage Critique (AC) | Application concrète dans le projet |
 | :--- | :--- | :--- |
-| **C1 - Réaliser** | AC11.01 - Développer une application informatique | Architecture MVC en JavaFX, modularité du code |
+| **C1 - Réaliser** | AC11.01 - Développer une application informatique | Architecture MVC en JavaFX|
 | **C1 - Réaliser** | AC11.02 - Élaborer des jeux de tests | Tests unitaires automatisés avec JUnit 5 |
-| **C4 - Gérer** | AC14.01 - Concevoir une base de données | Modélisation Merise / UML et requêtes SQL |
-| **C5 - Conduire** | AC15.01 - Appliquer une démarche agile | Suivi des tâches avec GitLab Issues / Kanban |
+| **C5 - Conduire** | AC15.01 - Appliquer une démarche agile | Suivi des tâches avec GitLab Issues |
