@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #CBD5E1; -fx-border-width: 1; -fx-background-radius: 8; -fx-border-radius: 8;" stylesheets="@../../../../../style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.megasae.controller.Popups.Choix.Popup_ChoixEvenementController">
+    <padding>
+        <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+    </padding>
+    <children>
+
+        <HBox alignment="CENTER" spacing="15.0">
+            <VBox.margin>
+                <Insets bottom="10.0" top="10.0" />
+            </VBox.margin>
+            <children>
+                <Button fx:id="btnNouveau" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleNouveauAction" prefHeight="80.0" prefWidth="140.0" text="Nouveau" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+
+                <Button fx:id="btnTemplate" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleTemplateAction" prefHeight="80.0" prefWidth="140.0" text="Template" textAlignment="CENTER">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+
+        <Button fx:id="btnAnnuler" mnemonicParsing="false" onAction="#handleAnnulerAction" prefWidth="100.0" text="Annuler">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Button>
+    </children>
+</VBox>

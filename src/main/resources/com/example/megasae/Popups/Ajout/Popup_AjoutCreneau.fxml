@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefWidth="500.0" spacing="0.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #D3D3D3; -fx-border-width: 1;" stylesheets="@../../../../../style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.megasae.controller.Popups.Ajout.Popup_AjoutCreneauController">
+    <children>
+        <HBox alignment="CENTER" style="-fx-background-color: #0A0944;" VBox.vgrow="NEVER">
+            <children>
+                <Label text="Ajout de créneau/activité" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="12.0" top="12.0" />
+            </padding>
+        </HBox>
+
+        <VBox prefHeight="457.0" prefWidth="498.0" spacing="12.0">
+            <padding>
+                <Insets bottom="20.0" left="30.0" right="30.0" top="25.0" />
+            </padding>
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <children>
+                        <Label prefWidth="120.0" text="Nom * :" textFill="#2C3E50">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtNom" style="-fx-background-color: #FFFFFF; -fx-border-color: #BDC3C7; -fx-border-radius: 3;" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <children>
+                        <Label prefWidth="120.0" text="Adresse :" textFill="#2C3E50">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtAdresse" style="-fx-background-color: #FFFFFF; -fx-border-color: #BDC3C7; -fx-border-radius: 3;" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <children>
+                        <Label prefWidth="120.0" text="Date début * :" textFill="#2C3E50">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <DatePicker fx:id="dpDateDebut" prefHeight="27.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #BDC3C7; -fx-border-radius: 3;" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+                <HBox spacing="10.0">
+                    <children>
+                        <Label prefWidth="120.0" text="Heure début * :" textFill="#2C3E50">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtHeureDebut" promptText="08:00" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <children>
+                        <Label prefWidth="120.0" text="Date Fin * :" textFill="#2C3E50">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <DatePicker fx:id="dpDateFin" prefHeight="27.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #BDC3C7; -fx-border-radius: 3;" />
+                    </children>
+                </HBox>
+                <HBox spacing="10.0">
+                    <children>
+                        <Label prefWidth="120.0" text="Heure fin* :" textFill="#2C3E50">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtHeureFin" promptText="18:30" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+
+                <HBox alignment="TOP_LEFT" spacing="10.0">
+                    <children>
+                        <Label prefWidth="120.0" text="Note :" textFill="#2C3E50">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <TextArea fx:id="txtNote" prefHeight="80.0" prefWidth="306.0" style="-fx-control-inner-background: #FFFFFF; -fx-border-color: #BDC3C7; -fx-border-radius: 3; -fx-background-color: transparent;" wrapText="true" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+
+                <HBox spacing="10.0">
+                    <children>
+                        <Label prefHeight="25.0" prefWidth="166.0" text="Membre(s) :" textFill="#2C3E50">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="btnAjouterTag" mnemonicParsing="false" onAction="#handleAjouterMembreClic" prefHeight="91.0" prefWidth="80.0" styleClass="btnAjout" text="+" HBox.hgrow="ALWAYS" />
+                        <FlowPane fx:id="listeMembre" prefHeight="91.0" prefWidth="313.0" HBox.hgrow="ALWAYS" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+        <HBox alignment="CENTER" prefHeight="81.0" prefWidth="498.0" spacing="40.0">
+            <padding>
+                <Insets bottom="25.0" left="30.0" right="30.0" top="10.0" />
+            </padding>
+            <children>
+                <Button fx:id="btnAnnuler" mnemonicParsing="false" onAction="#handleAnnuler" prefHeight="45.0" prefWidth="160.0" text="ANNULER" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="btnConfirmer" mnemonicParsing="false" onAction="#handleConfirmer" prefHeight="45.0" prefWidth="160.0" text="Confirmer" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+
+    </children>
+</VBox>

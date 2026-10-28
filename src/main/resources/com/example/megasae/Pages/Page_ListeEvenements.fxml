@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700" prefWidth="1200" stylesheets="@../../../../style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.megasae.controller.Pages.Page_ListeEvenementsController">
+    <center>
+        <VBox>
+            <children>
+                <ScrollPane fx:id="mainScrollPane" fitToHeight="true" fitToWidth="true" style="-fx-background: white; -fx-background-color: white;" VBox.vgrow="ALWAYS">
+                    <content>
+                        <VBox fx:id="mainContent" spacing="25" style="-fx-background-color: white; -fx-padding: 30 35 30 35;">
+
+                        <!-- Page title -->
+                            <Label fx:id="eventsTitle" style="-fx-font-size: 22; -fx-font-weight: bold;" text="Mes événements :" />
+
+                            <!-- Search & Filter -->
+                            <HBox alignment="CENTER_LEFT" spacing="12">
+                                <TextField fx:id="txtRecherche" onKeyReleased="#handleRecherche" prefWidth="260" promptText="Rechercher un évènement" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #cccccc; -fx-padding: 8 16; -fx-font-size: 13;" />
+                                <Button fx:id="btnFilter" onAction="#handleFilterAction" onMouseEntered="#handleFilterBtnHovered" onMouseExited="#handleFilterBtnExited" style="-fx-background-color: white; -fx-border-color: #bbbbbb; -fx-border-width: 1; -fx-background-radius: 20; -fx-border-radius: 20; -fx-padding: 8 22; -fx-cursor: hand; -fx-font-size: 13;" text="Filtrer" />
+                            </HBox>
+
+                            <GridPane fx:id="eventsGrid" hgap="25" vgap="25">
+                                <columnConstraints>
+                                    <ColumnConstraints percentWidth="50" />
+                                    <ColumnConstraints percentWidth="50" />
+                                </columnConstraints>
+                                <children>
+                                </children>
+                            </GridPane>
+
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

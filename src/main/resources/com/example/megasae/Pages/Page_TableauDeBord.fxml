@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="700" prefWidth="1200" stylesheets="@../../../../style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.megasae.controller.Pages.Page_TableauDeBordController">
+
+    <center>
+        <VBox>
+            <children>
+                <ScrollPane fx:id="mainScrollPane" fitToHeight="true" fitToWidth="true" style="-fx-background: white; -fx-background-color: white;" VBox.vgrow="ALWAYS">
+                    <content>
+
+                        <VBox fx:id="mainContent" spacing="25" style="-fx-background-color: white; -fx-padding: 30 35 30 35;">
+
+                            <Label fx:id="dashboardTitle" style="-fx-font-size: 22; -fx-font-weight: bold;" text="Tableau de bord" />
+
+                            <HBox fx:id="statsRow" alignment="CENTER_LEFT" maxWidth="1.7976931348623157E308" spacing="20">
+
+                                <VBox fx:id="statCardEvenements" maxWidth="1.7976931348623157E308" onMouseClicked="#handleStatEvenementsClicked" onMouseEntered="#handleStatCardHovered" onMouseExited="#handleStatCardExited" spacing="6" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-border-width: 1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: hand;" HBox.hgrow="ALWAYS">
+                                    <HBox alignment="CENTER_LEFT" spacing="8">
+                                        <Label style="-fx-font-size: 18;" text="📅" />
+                                        <Label style="-fx-font-size: 12; -fx-text-fill: #666666;" text="Événement(s)" />
+                                    </HBox>
+                                    <Label fx:id="statNbEvenements" style="-fx-font-size: 30; -fx-font-weight: bold;" text="0" />
+                                </VBox>
+
+                                <VBox fx:id="statCardTemplates" maxWidth="1.7976931348623157E308" onMouseClicked="#handleTemplateEvenementsClicked" onMouseEntered="#handleStatCardHovered" onMouseExited="#handleStatCardExited" spacing="6" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-border-width: 1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: hand;" HBox.hgrow="ALWAYS">
+                                    <HBox alignment="CENTER_LEFT" spacing="8">
+                                        <Label style="-fx-font-size: 18;" text="📋" />
+                                        <Label style="-fx-font-size: 12; -fx-text-fill: #666666;" text="Template(s)" />
+                                    </HBox>
+                                    <Label fx:id="statTemplates" style="-fx-font-size: 30; -fx-font-weight: bold;" text="0" />
+                                </VBox>
+
+                                <VBox fx:id="statCardSoldes" maxWidth="1.7976931348623157E308" onMouseEntered="#handleStatCardHovered" onMouseExited="#handleStatCardExited" spacing="6" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-border-width: 1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: hand;" HBox.hgrow="ALWAYS">
+                                    <HBox alignment="CENTER_LEFT" spacing="8">
+                                        <Label style="-fx-font-size: 18;" text="💰" />
+                                        <Label style="-fx-font-size: 12; -fx-text-fill: #666666;" text="Solde total" />
+                                    </HBox>
+                                    <Label fx:id="statSoldes" style="-fx-font-size: 30; -fx-font-weight: bold;" text="0 €" />
+                                </VBox>
+
+                                <VBox fx:id="statCardTaches" maxWidth="1.7976931348623157E308" onMouseEntered="#handleStatCardHovered" onMouseExited="#handleStatCardExited" spacing="6" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-border-width: 1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: hand;" HBox.hgrow="ALWAYS">
+                                    <HBox alignment="CENTER_LEFT" spacing="8">
+                                        <Label style="-fx-font-size: 18;" text="✅" />
+                                        <Label style="-fx-font-size: 12; -fx-text-fill: #666666;" text="Tâche(s)" />
+                                    </HBox>
+                                    <Label fx:id="statTaches" style="-fx-font-size: 30; -fx-font-weight: bold;" text="0%" />
+                                </VBox>
+
+                                <VBox fx:id="statCardCommunaute" maxWidth="1.7976931348623157E308" onMouseEntered="#handleStatCardHovered" onMouseExited="#handleStatCardExited" spacing="6" style="-fx-background-color: white; -fx-border-color: #cccccc; -fx-border-width: 1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 15; -fx-cursor: hand;" HBox.hgrow="ALWAYS">
+                                    <HBox alignment="CENTER_LEFT" spacing="8">
+                                        <Label style="-fx-font-size: 18;" text="👥" />
+                                        <Label style="-fx-font-size: 12; -fx-text-fill: #666666;" text="Communauté" />
+                                    </HBox>
+                                    <Label fx:id="statTotalParticipants" style="-fx-font-size: 30; -fx-font-weight: bold;" text="0" />
+                                </VBox>
+
+                            </HBox>
+
+                            <Label fx:id="progressionTitle" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Progression des événements récents" />
+
+                            <FlowPane fx:id="progressionRow" alignment="TOP_LEFT" hgap="20.0" prefWrapLength="1100.0" vgap="20.0">
+                                <children>
+                                </children>
+                            </FlowPane>
+
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+    </center>
+
+</BorderPane>

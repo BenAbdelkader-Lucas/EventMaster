@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="700" prefWidth="1200" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.megasae.controller.Pages.PageController">
+    <center>
+        <VBox>
+            <children>
+                <ScrollPane fx:id="mainScrollPane" fitToHeight="true" fitToWidth="true" style="-fx-background: white; -fx-background-color: white;" VBox.vgrow="ALWAYS">
+                    <content>
+                        <VBox fx:id="mainContent" spacing="20" style="-fx-background-color: white; -fx-padding: 30 35 30 35;">
+
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

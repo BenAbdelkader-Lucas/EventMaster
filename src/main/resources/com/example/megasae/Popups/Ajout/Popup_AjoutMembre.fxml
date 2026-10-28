@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+
+
+<VBox prefWidth="450.0" spacing="0.0"
+      style="-fx-background-color: #FFFFFF; -fx-border-color: #D3D3D3; -fx-border-width: 1;"
+      stylesheets="@../../../../../style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.megasae.controller.Popups.Ajout.Popup_AjoutMembreController">
+    <children>
+
+        <HBox alignment="CENTER" style="-fx-background-color: #0A0944;">
+            <children>
+                <Label text="Informations du Membre" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="14.0"/>
+                    </font>
+                </Label>
+            </children>
+            <padding>
+                <Insets bottom="12.0" top="12.0"/>
+            </padding>
+        </HBox>
+
+        <VBox spacing="12.0">
+            <padding>
+                <Insets bottom="20.0" left="30.0" right="30.0" top="25.0"/>
+            </padding>
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <children>
+                        <Label prefWidth="110.0" text="Nom * :" textFill="#2C3E50">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtNomTag"
+                                   style="-fx-background-color: #FFFFFF; -fx-border-color: #BDC3C7; -fx-border-radius: 3;"
+                                   HBox.hgrow="ALWAYS"/>
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <children>
+                        <Label prefWidth="110.0" text="Prénom * :" textFill="#2C3E50">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtDescriptionTag"
+                                   style="-fx-background-color: #FFFFFF; -fx-border-color: #BDC3C7; -fx-border-radius: 3;"
+                                   HBox.hgrow="ALWAYS"/>
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <children>
+                        <Label prefWidth="110.0" text="E-mail * :" textFill="#2C3E50">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtMailMembre" promptText="exemple@mail.com"
+                                   style="-fx-background-color: #FFFFFF; -fx-border-color: #BDC3C7; -fx-border-radius: 3;"
+                                   HBox.hgrow="ALWAYS"/>
+                    </children>
+                </HBox>
+
+                <HBox alignment="CENTER_LEFT" spacing="10.0">
+                    <children>
+                        <Label prefWidth="110.0" text="Téléphone * :" textFill="#2C3E50">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="txtTelMembre" promptText="0000000000"
+                                   style="-fx-background-color: #FFFFFF; -fx-border-color: #BDC3C7; -fx-border-radius: 3;"
+                                   HBox.hgrow="ALWAYS"/>
+                    </children>
+                </HBox>
+
+                <HBox alignment="TOP_LEFT" spacing="10.0">
+                    <children>
+                        <Label prefWidth="110.0" text="Note Interne :" textFill="#2C3E50">
+                            <font>
+                                <Font size="15.0"/>
+                            </font>
+                        </Label>
+                        <TextArea fx:id="txtNoteInterneMembre" prefHeight="70.0" prefWidth="104.0"
+                                  style="-fx-control-inner-background: #FFFFFF; -fx-border-color: #BDC3C7; -fx-border-radius: 3;"
+                                  wrapText="true" HBox.hgrow="ALWAYS"/>
+                    </children>
+                </HBox>
+            </children>
+
+            <Label style="-fx-font-size: 14; -fx-text-fill: #333333;" text="Tag(s) :"/>
+            <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="388.0" spacing="5.0">
+                <children>
+                    <Button fx:id="btnAjouterTag" onAction="#handleOpenPopupTagAction" prefHeight="91.0"
+                            prefWidth="27.0" styleClass="btnAjout" text="+"/>
+                    <FlowPane fx:id="listeTag" prefHeight="95.0" prefWidth="324.0" rowValignment="TOP"
+                              style="-fx-border-color: grey; -fx-background-radius: 6px; -fx-border-radius: 6px;"
+                              HBox.hgrow="ALWAYS"/>
+                </children>
+            </HBox>
+
+            <Label style="-fx-font-size: 14; -fx-text-fill: #333333;" text="Role(s) :"/>
+            <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="388.0" spacing="5.0">
+                <children>
+                    <Button fx:id="btnAjouterRole" onAction="#handleOpenPopupRoleAction" prefHeight="91.0"
+                            prefWidth="27.0" styleClass="btnAjout" text="+"/>
+                    <FlowPane fx:id="listeRole" prefHeight="95.0" prefWidth="217.0" rowValignment="TOP"
+                              style="-fx-border-color: grey; -fx-background-radius: 6px; -fx-border-radius: 6px;"
+                              HBox.hgrow="ALWAYS"/>
+                </children>
+            </HBox>
+
+        </VBox>
+
+        <HBox alignment="CENTER" spacing="30.0">
+            <padding>
+                <Insets bottom="20.0" left="30.0" right="30.0" top="10.0"/>
+            </padding>
+            <children>
+                <Button fx:id="btnAnnuler" mnemonicParsing="false" onAction="#handleAnnulerTag" prefWidth="140.0"
+                        text="ANNULER"/>
+                <Button fx:id="btnConfirmer" mnemonicParsing="false" onAction="#handleConfirmerTag" prefWidth="140.0"
+                        text="CONFIRMER"/>
+            </children>
+        </HBox>
+
+    </children>
+</VBox>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="493.0" prefWidth="687.0" stylesheets="@../../../../../style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.megasae.controller.Popups.Attribution.Popup_AttributionTagController">
+    <children>
+
+        <HBox alignment="CENTER" prefHeight="154.0" prefWidth="600.0" style="-fx-background-color: #0B0954;">
+            <children>
+                <Label fx:id="lblTitreTag" alignment="CENTER" contentDisplay="CENTER" prefWidth="177.0" style="-fx-font-weight: bold;" text="Ajout Tags" textFill="WHITE">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+
+        <HBox alignment="CENTER" spacing="10.0">
+            <children>
+                <Label text="Tags">
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Label>
+                <Region HBox.hgrow="ALWAYS" />
+            <ToggleButton fx:id="toggleSupprimer" mnemonicParsing="false" onAction="#toggleActionSuppresion" text="Supprimer" />
+                <ToggleButton fx:id="toggleModification" mnemonicParsing="false" onAction="#toggleActionModification" text="Modification" />
+                <Button fx:id="btnCreerTag" mnemonicParsing="false" onAction="#handleBtnAjouterTag" prefHeight="25.0" prefWidth="101.0" text="+ Ajouter Tag" />
+            </children>
+            <VBox.margin>
+                <Insets bottom="20.0" />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </HBox>
+
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <Label text="Attribués">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <FlowPane fx:id="listAttribue" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: grey;" />
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" />
+            </padding>
+        </VBox>
+
+        <VBox prefHeight="200.0" prefWidth="100.0">
+            <children>
+                <Label text="Disponibles">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <FlowPane fx:id="listDisponible" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: grey;" />
+            </children>
+            <padding>
+                <Insets left="20.0" right="20.0" />
+            </padding>
+        </VBox>
+
+        <HBox alignment="CENTER" prefHeight="179.0" prefWidth="520.0" spacing="100.0">
+            <children>
+                <Button fx:id="btnOk" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleBtnConfirmer" prefHeight="60.0" prefWidth="180.0" text="Confirmer" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </HBox>
+
+    </children>
+</VBox>
