@@ -1,6 +1,4 @@
-# MEGA-SAE
-
-EventMaster
+# EventMaster
 
 Application de gestion d'événements général développée en JavaFX dans le cadre du BUT Informatique à l'IUT2 (Université Grenoble Alpes).
 
